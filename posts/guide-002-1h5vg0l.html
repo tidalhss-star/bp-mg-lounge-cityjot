@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>합정 쪽 뒷골목에 옛날 소울老兵들이 아는 가라오케 같은 보스들이 있었다</title>
+  <link rel="canonical" href="https://lounge.cityjot.shop/posts/guide-002-1h5vg0l.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>합정 쪽 뒷골목에 옛날 소울老兵들이 아는 가라오케 같은 보스들이 있었다</h1>
+    <article>
+      <p>1.02 빌드에서 드롭된 데이터를 뒤지면, 미사용 보스 엔트리가 정확히 3개 찍힌다. Fallingstar Beast Variant, Giant Ant Queen, 그리고 Black Knife Absolver라는 이름표가 달린 녀석. 이 셋은 패턴 시드가 완성단계까지 도달했음에도 패치 노트 한 줄 없이 사라졌다.</p>
+<p>Fallingstar Variant의 경우, 일반체 대비 중력파 공격 프레임이 12帧 더 길다. 문제는 이게 밸런스 문제가 아니라 아키텍처 충돌이었다. 중력파 연출이 맵 테라인과 충돌할 때 클리핑 버그가 터졌고, 리메이크 과정에서 해당 구역의 콜라이더 메시가 전면 교체되면서 보스 자체가 고아가 됐다.</p>
+<p>Giant Ant Queen은 좀 더 처참하다. 페로몬 소환 패턴이 있었는데, 본체 사망 시 minions가 7초간 어그로 유지되는 설계였다. 근데 이 메커니즘이 다른 영역의 스폰 로직과 충돌하면서, 플레이어가 특정 컨디션에서 무한 리스폰 루프에 갇히는 케이스가 발생했다. 핫픽스 대신 보스 자체를 잘라버린 거다.</p>
+<p>Black Knife Absolver는 솔직히 가장 아쉬운 케이스. 암살자 계열 보스인데, 패리 프레임 윈도우가 0.2초로 설정되어 있었다. 이건 의도적 난이도 상향이었을 가능성이 높다. 다만 해당 보스가 위치하던 던전 구조가 리뉴얼되면서, 진입 루트 자체가 소실됐다.</p>
+<p>스피드러너 관점에서 보면, 이 보스들은 원래 존재했던 글리치 체인과 깊게 연결되어 있었다. 특히 Black Knife Absolver의 위치가 우연히도 특정 스킵 루트의 체크포인트 근처였는데, 이게 패치 1.03에서 해당 영역의 월프런스 타이밍이 조정되면서 완전히 닫혔다. 프레임 단위로 재현하던 그 루트, 나는 한때 847번 시도해서 3번 성공시킨 적 있다.</p>
+<p>내가 이걸 아는 이유는 합정 쪽에서 소규모 모임을 만들던 시절이 있었기 때문이다. 소인원 파티 같은 거. 거기서 옛날 데이터마이닝 포럼 사람들 만나면서 이런 정보를 주워들은 건데, 요즘 애들은 딥다크 영상 몇 개 보고 전문가 행세를 한다. 프레임 데이터 하나 제대로 읽어본 적 없는 놈들이.</p>
+<p>실제로 이 보스들의 AI 스크립트를 디컴파일하면, 상태머신 노드가 최소 47개 이상 배치되어 있다. 일반 보스 대비 1.8배 수준인데, 이건 개발 초기에 복잡한 패턴을 구현하려 했다가 단순화하는 과정에서 버려진 구조물이다.</p>
+<p>아, 그리고 이 보스들 중 하나의 AI 스크립트에서 코멘트 처리된 텍스트가 하나 발견됐는데, "too fun to remove but too broken to ship"라고 적혀 있었다. 개발자도 아쉬웠다는 뜻이다.</p>
+<p>합정 뒷골목에서 만나던 그 사람들, 지금은 다 어디갔을까. 소수 정예로 뭔가를 파던 시절이 있었는데 말이야.</p>
+<p>마지막으로 확인할 것 세 가지: 이 보스들의 AI 스크립트가 실제로 1.0 빌드에 존재하는지, 패치 1.03의 영역 타이밍 조정이 의도적 삭제였는지, 그리고 네가 지금 보고 있는 데이터 소스가 디컴파일본인지 리버스엔지니어링 결과인지. 이거 확인 안 하고 화면 캡처 하나 퍼나르면 그게 바로 '요즘 것들'의 전형이다.</p>
+    </article>
+  </main>
+</body>
+</html>

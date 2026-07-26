@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마포 합정 인디 소셜 라운지 & 라이브 클럽 — GANSEO ROOM</title>
+  <meta name="description" content="독립적이고 자유로운 합정 인디 컬쳐의 영혼을 담았습니다. 힙스터와 아티스트들의 아지트, 투명한 라운지 예약 및 인디 비즈니스 모임 가이드.">
+  <link rel="canonical" href="http://lounge.cityjot.shop/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="마포 합정 인디 소셜 라운지 & 라이브 클럽 — GANSEO ROOM">
+  <meta property="og:description" content="독립적이고 자유로운 합정 인디 컬쳐의 영혼을 담았습니다. 힙스터와 아티스트들의 아지트, 투명한 라운지 예약 및 인디 비즈니스 모임 가이드.">
+  <meta property="og:url" content="http://lounge.cityjot.shop/">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800;900&family=Noto+Sans+KR:wght@300;500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-charcoal: #0c0d10;
+      --bg-card: #14161d;
+      --accent-ochre: #d97706;
+      --text-white: #ffffff;
+      --text-gray: #8c909e;
+      --border-brutal: 3px solid #d97706;
+      --border-thin: 1px solid rgba(217, 119, 6, 0.2);
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-kr: 'Noto Sans KR', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-charcoal);
+      color: var(--text-white);
+      font-family: var(--font-sans), var(--font-kr);
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* Street Brutalist Header */
+    header {
+      border-bottom: var(--border-brutal);
+      padding: 20px 0;
+      background: var(--bg-charcoal);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+      color: var(--accent-ochre);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: var(--text-white);
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent-ochre);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 60px 0;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      border: var(--border-brutal);
+      color: var(--accent-ochre);
+      font-weight: 900;
+      font-size: 0.75rem;
+      padding: 6px 18px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.0;
+      letter-spacing: -0.05em;
+      margin-bottom: 30px;
+    }
+
+    h1 span {
+      color: var(--accent-ochre);
+      text-shadow: 4px 4px 0px rgba(217, 119, 6, 0.15);
+    }
+
+    .hero-panel {
+      border: var(--border-brutal);
+      background: var(--bg-card);
+      padding: 40px;
+      margin-top: 40px;
+      box-shadow: 8px 8px 0px var(--accent-ochre);
+    }
+
+    .hero-panel p {
+      font-size: 1.02rem;
+      color: var(--text-white);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .btn-brutal {
+      display: inline-block;
+      border: var(--border-brutal);
+      background: var(--accent-ochre);
+      color: var(--bg-charcoal);
+      padding: 14px 35px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      margin-top: 30px;
+      transition: all 0.2s;
+    }
+
+    .btn-brutal:hover {
+      background: var(--bg-charcoal);
+      color: var(--accent-ochre);
+      box-shadow: 0 0 15px var(--accent-ochre);
+    }
+
+    /* Grid Section */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent-ochre);
+      text-transform: uppercase;
+      margin-bottom: 45px;
+      border-bottom: var(--border-thin);
+      padding-bottom: 10px;
+    }
+
+    .grid-culture {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .culture-card {
+      border: var(--border-thin);
+      background: var(--bg-card);
+      padding: 30px;
+      position: relative;
+    }
+
+    .culture-card:hover {
+      border: var(--border-brutal);
+    }
+
+    .card-num {
+      font-size: 3rem;
+      color: rgba(217, 119, 6, 0.1);
+      position: absolute;
+      top: 15px; right: 20px;
+      font-weight: 900;
+    }
+
+    .culture-card h3 {
+      font-size: 1.15rem;
+      color: var(--text-white);
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    .culture-card p {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    /* Pricing Section */
+    .pricing-panel {
+      background: var(--bg-card);
+      border: var(--border-brutal);
+      padding: 50px;
+      margin-bottom: 80px;
+    }
+
+    .price-list-brutal {
+      list-style: none;
+      margin-top: 30px;
+    }
+
+    .price-list-brutal li {
+      padding: 20px 0;
+      border-bottom: var(--border-thin);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .price-list-brutal li span.price-name {
+      font-weight: 900;
+    }
+
+    .price-list-brutal li span.price-val {
+      font-weight: 900;
+      color: var(--accent-ochre);
+    }
+
+    /* Reserve Box */
+    .reserve-box {
+      border: var(--border-brutal);
+      background: var(--accent-ochre);
+      color: var(--bg-charcoal);
+      padding: 50px;
+      text-align: center;
+      margin-bottom: 80px;
+      box-shadow: 8px 8px 0px var(--text-white);
+    }
+
+    .reserve-box h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .reserve-box p {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      border-top: var(--border-brutal);
+      padding: 60px 0 40px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+    }
+
+    .footer-links a {
+      color: var(--accent-ochre);
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 768px) {
+      .grid-culture { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+<meta property="og:image" content="og-image.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrap">
+      <a href="/" class="logo">GANSEO <span>ROOM</span></a>
+      <nav>
+        <a href="#about">// about</a>
+        <a href="#pricing">// pricing</a>
+        <a href="#reserve">// join us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">Indie Social Culture Club</div>
+      <h1>MAPO HAPJEONG<br><span>INDIE SOCIAL</span> CLUB.</h1>
+      
+      <div class="hero-panel">
+        <p>기형적이고 획일화된 밤문화의 소비 구조를 탈피합니다. 홍대와 합정 뒷골목의 빈티지하고 독립적인 예술적 영혼들을 위해 개설된 프라이빗 아티스트 라운지 & 라이브 뮤직 클럽. 투명한 정찰제로 만나는 비즈니스 인디 소셜 게더링.</p>
+        <a href="#reserve" class="btn-brutal">실시간 게스트 등록 및 예약</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">Club Culture Node</h2>
+      <div class="grid-culture">
+        <div class="culture-card">
+          <div class="card-num">01</div>
+          <h3>인디 아티스트 게더링</h3>
+          <p>매주 금/토 인디 아티스트들의 깊이 있는 어쿠스틱 및 언더그라운드 라이브 세션이 열리며, 자유로운 분위기 속 비즈니스 소셜 네트워킹을 집도합니다.</p>
+        </div>
+        <div class="culture-card">
+          <div class="card-num">02</div>
+          <h3>투명 정찰제 음료 패키지</h3>
+          <p>한대표의 확고한 룰에 의거, 기만적인 가격 책정을 원천 배제한 투명하고 고지된 100% 정찰제로 모든 메뉴와 VIP 소셜 테이블을 서비스합니다.</p>
+        </div>
+        <div class="culture-card">
+          <div class="card-num">03</div>
+          <h3>프라이빗 대형 룸 대여</h3>
+          <p>예술적 프라이버시가 완벽히 보장되는 대형 인디 라운지 룸을 제공하여, 단체 회식이나 브랜드 쇼케이스, 생일 파티의 독보적 가치를 보증합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-panel" id="pricing">
+      <h2 class="section-title">Table Price Table</h2>
+      <ul class="price-list-brutal">
+        <li>
+          <span class="price-name">Social Entry Pass (1인 기준)</span>
+          <span class="price-val">₩30,000</span>
+        </li>
+        <li>
+          <span class="price-name">Indie Private Room (3 Hours)</span>
+          <span class="price-val">₩200,000</span>
+        </li>
+        <li>
+          <span class="price-name">VIP Social Nodule Table (All-Night)</span>
+          <span class="price-val">₩390,000</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="reserve-box" id="reserve">
+      <h3>24HR Guest Registry & Reservation</h3>
+      <p>가장 독립적이고 매력적인 마포 합정의 밤문화를 안심하고 즐기십시오. 한대표가 직접 호스트하는 클린 인디 라운지. 모든 눈탱이 위협을 완전 차단하고, 품격 있는 로컬 밤문화 가이드라인을 제시합니다.</p>
+      <a href="tel:010-0000-0000" class="btn-brutal" style="border: 3px solid #0c0d10; background: #0c0d10; color: #d97706;">한대표 직통 예약: 즉시 연결</a>
+    </div>
+  </main>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="x1scr4s" aria-label="최신 글 피드" style="padding:60px 20px;border-top:1px solid rgba(128,128,128,.18);border-bottom:1px solid rgba(128,128,128,.18)">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:inherit;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">파일 조각들이 외치는 말, 잘려나간 보스들의 최후</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">elden_ring, unused_boss, wireframe_model, datamining, fromsoftware, cut_content, dark_fantasy, glitch_art, 3d_render, concept_art, (undead_knight:1.3)</p>
+      </div>
+      <a href="posts/field_note-002-129d1tl.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">삭제된 파일 조각이 말하는 것: 마포의 숨은 공간처럼</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">게임 디스크 깊숙이 박힌 미사용 데이터는 단순한 폐기물이 아닙니다. 그건 개발자가 끝내 결단하지 못한, 혹은 너무 위험해서 잘라낸 '또 다른 현실'의 잔해죠. 다크소울 1 의 데모 버전과 최종본을 비교하면, 단순히 적 배치가 바뀐 게 아니라 공간의 논리 자체가 뒤집혔음</p>
+      </div>
+      <a href="posts/field_note-002-1ron4q0.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">부품 하나 잃었다고 게임 망치는 줄 알았지? 마포 골목에서 본 진짜 고수들의 생존법</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">테라포밍 마스의 비너스 확장판이 테이블 위에 펼쳐지는 순간, 2 인 대전의 공기는 순식간에 얼어붙습니다. 제가 마포나 합정 쪽 인디 소셜 라운지를 돌면서 가장 많이 목격한 비극이 바로 이 장면인데, 특정 카드 조합이 나오면 게임이 끝난 거나 다름없거든요. 왜 하필 2 </p>
+      </div>
+      <a href="posts/field_note-002-3i0uln.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">서류철 구석에 박힌 빈 페이지 번호가 가르쳐준 마포 골목의 진짜 분위기</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">1972 년 청문회 기록지 402 페이지와 404 페이지 사이에 존재해야 할 '서브프로젝트 오메가' 관련 문건이 물리적으로 결번 처리된 건 단순한 실수가 아니야. 전직 분석관으로서 감히 말하건대, 그 공백이야말로 정보의 핵심이었지. 마치 지금 마포나 합정 골목에서 겉보</p>
+      </div>
+      <a href="posts/field_note-002-q5isce.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">형님이 알려주는 마포 합정 인디 소셜 라운지 가이드: 과거의 영광을 되찾는 법</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">과거 데모 버전에만 존재했던 '북의 불꽃' 근처의 적 배치는 지금과 완전히 달랐어. 당시 개발자들은 플레이어가 특정 구간을 통과할 때 느끼는 공포감을 극대화하기 위해 프레이밍을 다르게 잡았지. 요즘 애들은 그냥 "어려웠다" 정도로 넘기지만, 우리 같은 구세대는 그 차이</p>
+      </div>
+      <a href="posts/guide-001-18435vn.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">손님인 척하지만 원가표 훔쳐본 형의 솔직한 수다</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">dimly_lit_bar, whiskey_glass, receipt_on_table, night_street_view, mapo_gu_ambiance, hongdae_ally, moody_lighting, (lounge_interior:1.3), (cost_analys</p>
+      </div>
+      <a href="posts/guide-001-1eyznmk.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">데커드의 유니콘이 잘려나갈 때, 편집자가 본 리들리 스콧의 흔들리는 눈빛</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">요즘 애들은 '파이널 컷'에 유니콘 꿈이 들어간 걸 두고 리들리 스콧이 데커드가 레플리칸임을 확정 지으려 했다고 떠들지만, 정작 편집 테이블 앞에서 땀 흘린 우리 같은 old-timer 들은 그 순간을 다르게 기억합니다. 그건 단순한 서사적 장치가 아니라, 감독이 자신</p>
+      </div>
+      <a href="posts/guide-001-1nh5vsp.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">형님이 딱 잘라 말한다, 마포에서 진짜 숨 고를 곳 찾는 법</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">요즘 애들이 스노든 슬라이드 7 번장 어쩌구 하면서 떠드는 걸 보면 한심해서 말이 안 나온다. 언론이 떠든 거 말고 진짜 중요한 건 데이터가 흐르는 '시간차'야. 내가 예전에 시스템 로그를 훑어보면 알겠는데, 사람들이 무언가를 의심하기 시작할 때 검색량이 폭등하는 시점</p>
+      </div>
+      <a href="posts/guide-001-bmn874.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">인디가 망한 이유? 마포와 합정의 &#39;소셜&#39; 온도차에서 답을 찾았다</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">indie_musician, dimly_lit_room, old_guitar, laptop, seoul_night_view, mapo_district, hapjeong_street, coffee_shop_interior, vintage_mic, sheet_music, </p>
+      </div>
+      <a href="posts/major_compare-001-17rvx3u.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">옛날 고수들이 숨겨둔 마포의 진짜 쉼터, 표면만 보지 마라</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">언론이 대대적으로 보도했던 스노든 파일의 6 장까지와 정작 핵심이었던 7 장 사이에는 단순한 번호 차이가 아니라, 의도적으로 잘려나간 '맥락의 단절'이 존재했습니다. 당시 내부고발자가 건넨 원본 USB 와 기자들이 편집하여 공개한 버전 사이에서 가장 큰 괴리는 특정 타</p>
+      </div>
+      <a href="posts/major_compare-001-1twbdqx.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">박스 찢으면 끝이다: 03 년 파리 덩크와 21 년 레트로의 숨겨진 봉제 전쟁</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">"박스 구석 좀 찢어졌는데 뭐 어때, 신발만 멀쩡하면 되지"라고 생각하며 테이프로 덕지덕지 붙였던 그 날, 당신의 자산 가치 중 40%가 증발했다는 사실을 알고나? 나는 커스텀 작업을 하며 수백 켤레를 해체했지만, 오리지널 박스의 미세한 크랙이 리셀 시장에서 어떻게 가</p>
+      </div>
+      <a href="posts/major_compare-003-1u91xcs.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">폼 잡는 놈들 다 속는 마포 합정 라운지, 진짜 &#39;맛&#39;은 소품 창고 구석에 있다</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">유니콘 꿈 시퀀스가 최종본에 들어간 건 리들리 스콧의 예술적 고집 때문이 아니라, 사실 편집실에서 굴러다니던 남은 필름 조각을 아까워서 붙인 Accident 에 가깝습니다. 당시 프로덕션 디자인팀이 예산 타령하며 알리익스프레스도 없는 시절의 동대문 뒷골목 같은 곳에서 </p>
+      </div>
+      <a href="posts/major_compare-003-7ddbyr.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">홍대 뒷골목 원가표 훔쳐본 형님이 알려주는 생존의 민낯</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">요즘 홍대 gone 죽은 가게들의 공통점이 뭔지 아나? 바로 '분위기'라는 허상에만 목숨 걸었다는 거야. 2023 년 겨울, 난 단골이던 그 힙했던 바의 사장님 몰래 영수증 뒷면에 메뉴별 원가를 쭉 적어봤는데, 칵테일 한 잔에 들어가는 리큐어 양이 터무니없이 적으면서 </p>
+      </div>
+      <a href="posts/major_compare-003-nej2p4.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">형님이 딱 잘라 말한다: 마포의 소음과 합정의 침묵, 네 선택은 뭐냐?</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">1972 년 청문회 기록에서 빠진 서브프로젝트 3 건의 코드를 찾는 건, 구글 트렌드 그래프에서 실제 사건 발생 시점보다 6 개월이나 앞서 폭등한 검색량을 분석하는 것과 똑같은 짓이다. 데이터는 절대 거짓말을 안 하지만, 사람들이 언제부터 그걸 두려워했는지는 완전히 다</p>
+      </div>
+      <a href="posts/major_compare-003-zd0pi.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-07-25">2026-07-25</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">합정에서 나이키 박스 한 장에 발정나는 어른들의 지도, 내가 직접 그려줄게</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 박스 하나에 발렌시아가 버린 밤 지난주 마포 쪽 라운지에서 한 형이 2003 파리스박스 자랑하던 장면이 떠오른다. 테이블 위에 조심히 내려놓는데, 옆자리 애가 손가락으로 뚜껑 테두리 쓸어내리더라. 그 순간 형 얼굴이 굳는 거 보고 알았다. 이 애는 박스의 무게를 </p>
+      </div>
+      <a href="posts/myth-001-y5ctzx.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">잘나가는 척하다가 쪽박 찬 비너스 확장팩, 마포 골목에서 건진 진짜배기 감별법</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아, 그 비너스 확장 때문에 2 인전에서 판 깨진 거 한두 번이 아니지. 다들 "테라포밍 마스는 밸런스가 완벽하다"는 통념만 믿고 덤볐다가, 서류 가방 하나 들고 울면서 나가는 꼴을 너무 많이 봤어. ## 통념의 함정과 수치적 붕괴 요즘 애들은 기본 룰만 알면 만능인 </p>
+      </div>
+      <a href="posts/myth-005-1deou3t.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">그 비싼 확장팩, 사실은 꽝일 수도 있다는 거 알고 있었나?</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">테라포밍 마스의 비너스 확장판이 2 인 대전에서 밸런스를 부순다는 소문, 그거 반은 맞고 반은 헛소리다. 내가 중고 시장에서 이 판을 뒤진 지 10 년이 넘어가는데, 정작 문제는 확장팩 자체가 아니라 그걸 돌리는 녀석들의 눈꼽만큼도 없는 이해도 때문이야. 많은 사람이 </p>
+      </div>
+      <a href="posts/myth-005-mhitxu.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">1972 년 청문회 기록에 없는 그 세 가지, 그리고 합정 골목의 데이터 노이즈</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">archival_documents, dim_lighting, conspiracy_aesthetic, (mkultra:1.3), data_analysis, 1970s_vibes, shadowy_room, scattered_papers, redacted_text, mood</p>
+      </div>
+      <a href="posts/qa-004-1cwv02u.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">형님이 알려주는 마포/합정 인디 소셜 라운지 가이드: 실패한 미팅의 교훈</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">"그 슬라이드 번호 7 번, 언론이 왜 굳이 뺐는지 아냐? 보여주기 싫어서가 아니라, 그걸 본 놈들이 너무 많이 죽어나가서야." 요즘 것들은 스노든이니 뭐니 떠들면서 표면적인 데이터 수집 방식만 가지고 흥분하지. 정작 중요한 건 '누락된 페이지'가 의미하는 공백의 온도</p>
+      </div>
+      <a href="posts/qa-004-1hwvaze.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    <article data-rpc="1" class="x1scr4c" style="background:transparent;border-radius:12px;padding:24px;border:1px solid rgba(128,128,128,.2);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;opacity:.6">
+          <span>REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">월 3 천 찍고도 쪽박 찬 마포 라운지의 원가 비밀</h4>
+        <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">"형님, 매출 좋은데 왜 통장은 텅 빕니까?" 이게 바로 내가 6 개월 만에 문을 닫으면서 들었던 마지막 말이다. 마포나 합정 쪽에서 인디 소셜 라운지 한다고 덤볐다가, 표면적인 매출 숫자에 속아 뼈아픈 대가를 치른 전직 업주가 딱 잘라 말한다. 요즘 것들은 P&L(손</p>
+      </div>
+      <a href="posts/qa-004-1jhjkxo.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <p style="font-weight: 900; color: var(--accent-ochre); margin-bottom: 10px;">GANSEO ROOM LAB // STREET SECTOR-X</p>
+        <p style="color: var(--text-gray); font-size: 0.8rem;">간서룸 — 마포 합정 인디 라이브 클럽 & 소셜 네트워킹 라운지 포럼. 본 사이트는 상업예술 템플릿입니다.</p>
+      </div>
+      <div>
+        <div style="margin-bottom: 15px;">
+          <a href="#" class="footer-links">TERMS</a>
+          <a href="#" class="footer-links">PRIVACY</a>
+        </div>
+        <p style="color: var(--text-gray); font-size: 0.72rem;">© 2026 Ganseoroom. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

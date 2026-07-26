@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+  <title>마포/합정 인디 소셜 라운지 가이드</title>
+  <rect width="64" height="64" rx="10" fill="hsl(332 45% 35%)"/>
+  <g transform="rotate(270 32 32)"><path d="M12 26q10-10 20 0t20 0" fill="none" stroke="hsl(332 24% 96%)" stroke-width="7" stroke-linecap="round"/><path d="M12 40q10-10 20 0t20 0" fill="none" stroke="hsl(89 68% 58%)" stroke-width="7" stroke-linecap="round"/></g>
+</svg>
