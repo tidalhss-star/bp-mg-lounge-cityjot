@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lounge.cityjot.shop/sitemap.xml
+Sitemap: https://lounge.cityjot.shop/sitemap-pages.xml
