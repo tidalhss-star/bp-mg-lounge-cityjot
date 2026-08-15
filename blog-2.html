@@ -1,20 +1,309 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>마포/합정 인디 소셜 라운지 가이드 | 비교 분석</title>
- <meta name="description" content="마포와 합정 인근 프라이빗 소인원 파티 공간을 찾는 분들을 위해, 공간 예약 시 놓치기 쉬운 소통의 어긋남과 확인해야 할 실질적인 체크리스트를 정리했습니다.">
- <meta name="keywords" content="마포 파티룸, 합정 소셜 라운지, 프라이빗 공간 대여, 인디 라운지 가이드">
- <link rel="canonical" href="https://lounge.cityjot.shop/blog-2.html">
- <meta property="og:title" content="마포/합정 인디 소셜 라운지 가이드 | 비교 분석">
- <meta property="og:type" content="website">
- <meta property="og:url" content="https://lounge.cityjot.shop/blog-2.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마포/합정 인디 소셜 라운지 가이드 | 비교 분석</title>
+  <meta name="description" content="마포와 합정 인근 프라이빗 소인원 파티 공간을 찾는 분들을 위해, 공간 예약 시 놓치기 쉬운 소통의 어긋남과 확인해야 할 실질적인 체크리스트를 정리했습니다.">
+  <link rel="canonical" href="https://lounge.cityjot.shop/blog-2.html">
+  <meta property="og:title" content="마포/합정 인디 소셜 라운지 가이드 | 비교 분석">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lounge.cityjot.shop/blog-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --bg-charcoal: #0c0d10;
+ --bg-card: #14161d;
+ --accent-ochre: #d97706;
+ --text-white: #ffffff;
+ --text-gray: #8c909e;
+ --border-brutal: 3px solid #d97706;
+ --border-thin: 1px solid rgba(217, 119, 6, 0.2);
+ --font-sans: 'Plus Jakarta Sans', sans-serif;
+ --font-kr: 'Noto Sans KR', sans-serif;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background-color: var(--bg-charcoal);
+ color: var(--text-white);
+ font-family: var(--font-sans), var(--font-kr);
+ line-height: 1.6;
+ letter-spacing: -0.01em;
+ }
+
+ .container {
+ max-width: 1000px;
+ margin: 0 auto;
+ padding: 0 30px;
+ }
+
+ /* Street Brutalist Header */
+ header {
+ border-bottom: var(--border-brutal);
+ padding: 20px 0;
+ background: var(--bg-charcoal);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+
+ .nav-wrap {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .logo {
+ font-weight: 900;
+ font-size: 1.4rem;
+ letter-spacing: -0.03em;
+ color: var(--accent-ochre);
+ text-decoration: none;
+ text-transform: uppercase;
+ }
+
+ .logo span {
+ color: var(--text-white);
+ }
+
+ nav {
+ display: flex;
+ gap: 30px;
+ }
+
+ nav a {
+ color: var(--text-gray);
+ text-decoration: none;
+ font-size: 0.85rem;
+ font-weight: 800;
+ text-transform: uppercase;
+ transition: color 0.2s;
+ }
+
+ nav a:hover {
+ color: var(--accent-ochre);
+ }
+
+ /* Hero */
+ .hero {
+ padding: 100px 0 60px 0;
+ }
+
+ .hero-badge {
+ display: inline-block;
+ border: var(--border-brutal);
+ color: var(--accent-ochre);
+ font-weight: 900;
+ font-size: 0.75rem;
+ padding: 6px 18px;
+ margin-bottom: 25px;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ }
+
+ h1 {
+ font-size: clamp(2.4rem, 7vw, 4.2rem);
+ font-weight: 900;
+ text-transform: uppercase;
+ line-height: 1.0;
+ letter-spacing: -0.05em;
+ margin-bottom: 30px;
+ }
+
+ h1 span {
+ color: var(--accent-ochre);
+ text-shadow: 4px 4px 0px rgba(217, 119, 6, 0.15);
+ }
+
+ .hero-panel {
+ border: var(--border-brutal);
+ background: var(--bg-card);
+ padding: 40px;
+ margin-top: 40px;
+ box-shadow: 8px 8px 0px var(--accent-ochre);
+ }
+
+ .hero-panel p {
+ font-size: 1.02rem;
+ color: var(--text-white);
+ font-weight: 300;
+ line-height: 1.7;
+ }
+
+ .btn-brutal {
+ display: inline-block;
+ border: var(--border-brutal);
+ background: var(--accent-ochre);
+ color: var(--bg-charcoal);
+ padding: 14px 35px;
+ font-weight: 900;
+ text-transform: uppercase;
+ text-decoration: none;
+ letter-spacing: 0.05em;
+ margin-top: 30px;
+ transition: all 0.2s;
+ }
+
+ .btn-brutal:hover {
+ background: var(--bg-charcoal);
+ color: var(--accent-ochre);
+ box-shadow: 0 0 15px var(--accent-ochre);
+ }
+
+ /* Grid Section */
+ .section-title {
+ font-size: 1.8rem;
+ font-weight: 900;
+ color: var(--accent-ochre);
+ text-transform: uppercase;
+ margin-bottom: 45px;
+ border-bottom: var(--border-thin);
+ padding-bottom: 10px;
+ }
+
+ .grid-culture {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 30px;
+ margin-bottom: 80px;
+ }
+
+ .culture-card {
+ border: var(--border-thin);
+ background: var(--bg-card);
+ padding: 30px;
+ position: relative;
+ }
+
+ .culture-card:hover {
+ border: var(--border-brutal);
+ }
+
+ .card-num {
+ font-size: 3rem;
+ color: rgba(217, 119, 6, 0.1);
+ position: absolute;
+ top: 15px; right: 20px;
+ font-weight: 900;
+ }
+
+ .culture-card h3 {
+ font-size: 1.15rem;
+ color: var(--text-white);
+ margin-bottom: 15px;
+ font-weight: 900;
+ }
+
+ .culture-card p {
+ font-size: 0.85rem;
+ color: var(--text-gray);
+ line-height: 1.6;
+ }
+
+ /* Pricing Section */
+ .pricing-panel {
+ background: var(--bg-card);
+ border: var(--border-brutal);
+ padding: 50px;
+ margin-bottom: 80px;
+ }
+
+ .price-list-brutal {
+ list-style: none;
+ margin-top: 30px;
+ }
+
+ .price-list-brutal li {
+ padding: 20px 0;
+ border-bottom: var(--border-thin);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 0.95rem;
+ }
+
+ .price-list-brutal li span.price-name {
+ font-weight: 900;
+ }
+
+ .price-list-brutal li span.price-val {
+ font-weight: 900;
+ color: var(--accent-ochre);
+ }
+
+ /* Reserve Box */
+ .reserve-box {
+ border: var(--border-brutal);
+ background: var(--accent-ochre);
+ color: var(--bg-charcoal);
+ padding: 50px;
+ text-align: center;
+ margin-bottom: 80px;
+ box-shadow: 8px 8px 0px var(--text-white);
+ }
+
+ .reserve-box h3 {
+ font-size: 1.5rem;
+ font-weight: 900;
+ margin-bottom: 20px;
+ text-transform: uppercase;
+ }
+
+ .reserve-box p {
+ max-width: 600px;
+ margin: 0 auto 30px auto;
+ font-size: 0.9rem;
+ font-weight: 500;
+ line-height: 1.7;
+ }
+
+ /* Footer */
+ footer {
+ border-top: var(--border-brutal);
+ padding: 60px 0 40px 0;
+ }
+
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ gap: 50px;
+ }
+
+ .footer-links a {
+ color: var(--accent-ochre);
+ text-decoration: none;
+ margin-right: 20px;
+ font-weight: 800;
+ }
+
+ @media (max-width: 768px) {
+ .grid-culture { grid-template-columns: 1fr; }
+ .footer-grid { grid-template-columns: 1fr; }
+ nav { display: none; }
+ }
+ </style>
   <meta property="og:description" content="마포와 합정 인근 프라이빗 소인원 파티 공간을 찾는 분들을 위해, 공간 예약 시 놓치기 쉬운 소통의 어긋남과 확인해야 할 실질적인 체크리스트를 정리했습니다.">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-
+  <div class="container">
+    <header>
+ <div class="container nav-wrap">
+ <a href="/" class="logo">GANSEO <span>ROOM</span></a>
+ <nav>
+ <a href="#about">// about</a>
+ <a href="#pricing">// pricing</a>
+ <a href="#reserve">// join us</a>
+ <a href="posts.html">글 목록</a></nav>
+ </div>
+ </header>
+    <main>
 <header>
  <nav class="n-nav-hgfh">
  <a href="/">홈</a>
@@ -84,6 +373,7 @@
  <p>&copy; 2024 마포/합정 인디 소셜 라운지 가이드. 모든 권리 보유.</p>
  <a href="#" class="k-btn-yoal">상담 문의하기</a>
 </footer>
-
+    </main>
+  </div>
 </body>
 </html>
